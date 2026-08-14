@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Developer Knowledge Graph</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- LEFT SIDE -->
+    <section class="network-panel">
+
+        <div class="network-header">
+
+            <div>
+                <h1>Knowledge Network</h1>
+                <p id="technologyCount">0 technologies discovered</p>
+            </div>
+
+            <div class="controls">
+
+                <select id="developerSelect">
+                    <option value="">Select Developer</option>
+                </select>
+
+                <button id="exploreBtn">
+                    Explore
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- GRAPH -->
+        <div id="graphArea">
+
+            <div class="legend">
+                <span>
+                    <i class="developer-dot"></i>
+                    Developer
+                </span>
+
+                <span>
+                    <i class="technology-dot"></i>
+                    Technology
+                </span>
+            </div>
+
+            <svg id="connections"></svg>
+
+            <div id="graphNodes"></div>
+
+
+            <div class="graph-legend">
+
+                <div>
+                    <span class="line knows-line"></span>
+                    KNOWS
+                </div>
+
+                <div>
+                    <span class="line related-line"></span>
+                    RELATED_TO
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="graph-info">
+
+            <span class="info-icon">!</span>
+
+            <div>
+                <strong>Select a developer to explore their complete
+                    technology knowledge network.</strong>
+
+                <br>
+
+                Currently showing data for:
+                <b id="currentDeveloper">None</b>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RIGHT SIDE -->
+    <section class="details-panel">
+
+        <h2>Technology Details</h2>
+
+        <div class="separator"></div>
+
+        <div id="technologyDetails">
+
+            <div class="empty-details">
+
+                <h3>Select a technology</h3>
+
+                <p>
+                    Click any technology from the knowledge graph
+                    to see its details.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
