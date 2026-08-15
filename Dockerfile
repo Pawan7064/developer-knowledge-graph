@@ -1,11 +1,11 @@
-FROM eclipse-temurin:21-jdk
+ FROM eclipse-temurin:21-jdk
 
-WORKDIR /app
+ WORKDIR /app
 
-COPY . .
+ COPY . .
 
-RUN ./mvnw clean package -DskipTests
+ RUN chmod +x mvnw && ./mvnw clean package -DskipTests
 
-EXPOSE 10000
+ EXPOSE 10000
 
-CMD ["sh", "-c", "java -jar target/*.jar"]
+ CMD ["sh", "-c", "java -jar target/*.jar"]
